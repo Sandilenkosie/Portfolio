@@ -5,78 +5,223 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salesforce Developer Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body class="bg-gray-900 text-white">
-    <!-- Header Section -->
-    <header class="bg-gray-800 p-4 text-white">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-2xl font-bold">GH-ST____</div>
-            <nav class="space-x-6">
-                <a href="#home" class="hover:text-purple-400">Home</a>
-                <a href="#skills" class="hover:text-purple-400">Skills</a>
-                <a href="#projects" class="hover:text-purple-400">Projects</a>
-            </nav>
-            <div>
-                <a href="#contact" class="hover:text-purple-400">Contact</a>
+    <body class="bg-gray-900 text-white px-2">
+        <!-- Header Section -->
+        <navbar class="p-4 bg-gray-900 navbar">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="text-2xl font-bold">GH-ST___</div>
+                <nav class="nav space-x-6">
+                    <a href="#home" class="active hover:text-purple-400">Home</a>
+                    <a href="#services" class="hover:text-purple-400">Services</a>
+                    <a href="#resume" class="hover:text-purple-400">Resume</a>
+                    <a href="#certifications" class="hover:text-purple-400">Certifications</a>
+                </nav>
             </div>
-        </div>
-    </header>
+        </navbar>
 
-    <!-- Home Section with Image -->
-    <section id="home" class="p-10 flex flex-col md:flex-row items-center justify-center gap-6 bg-gray-900">
-        <div>
-            <img src="img/home.png" alt="Your Photo" class="w-[400px] h-[400px] object-cover rounded-full shadow-lg border-4 border-purple-600">
-        </div>
-        <div class="text-center md:text-left">
-            <h2 class="text-4xl font-bold text-purple-400">Hi, I'm Your Name</h2>
-            <h3 class="text-2xl font-semibold mt-2">Salesforce Developer</h3>
-            <p class="text-gray-400 mt-4">Passionate about automation, Lightning Web Components, and customizing Salesforce to drive business success.</p>
-            <a href="#contact" class="mt-6 inline-block bg-purple-600 text-white py-2 px-4 rounded shadow-md transform hover:bg-white transition-colors duration-300">Contact Me</a>
+    <div class="bars-animation">
+        <div class="bar" style="--i:6;"></div>
+        <div class="bar" style="--i:5;"></div>
+        <div class="bar" style="--i:4;"></div>
+        <div class="bar" style="--i:3;"></div>
+        <div class="bar" style="--i:2;"></div>
+        <div class="bar" style="--i:1;"></div>
+    </div>
 
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="p-6 bg-gray-800">
-        <h2 class="text-2xl font-semibold mb-2">Skills</h2>
-        <ul class="list-disc pl-5">
-            <li>Salesforce Configuration & Customization</li>
-            <li>Apex, Lightning Components, Flows</li>
-            <li>TailwindCSS, HTML, JavaScript</li>
-            <li>Integrations & API Development</li>
-        </ul>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="p-6">
-        <h2 class="text-2xl font-semibold mb-2">Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="bg-gray-800 p-4 shadow rounded">
-                <h3 class="text-xl font-semibold">Sales Process Automation</h3>
-                <p class="text-gray-400">Built an automated lead-to-opportunity process using flows and process builder.</p>
+        <!-- Home Section with Image -->
+        <section id="home" class="p-10 flex flex-col md:flex-row items-center justify-center gap-6v">
+            <div class="home-img">
+                <div class="img-box">
+                    <div class="img-item">
+                    <img src="img/pexels-mikhail-nilov-6964348.jpg" alt="Your Photo">
+                    </div>
+                </div>
             </div>
-            <div class="bg-gray-800 p-4 shadow rounded">
-                <h3 class="text-xl font-semibold">Custom Lightning App</h3>
-                <p class="text-gray-400">Developed a custom app with Lightning Web Components for better UX.</p>
+            <div class="home-info">
+                <h2 class="text-4xl font-bold">Sandile Nkosi</h2>
+                <h3 class="text-2xl font-semibold mt-2">I am a 
+                    <span style="--i:4;" data-text="Salesforce Developer">Salesforce Developer</span>
+                    <span style="--i:3;" data-text="Data analysis">Data analysis</span>
+                    <span style="--i:2;" data-text="Web Developer">Web Developer</span>
+                    <span style="--i:1;" data-text="Freelancer">Freelancer</span>
+                </h3>
+                <p class="mt-4">A motivated Junior Salesforce Developer with 1 year of experience in Salesforce development, 
+                    customization, and automation. Proficient in Apex, Flow, and Lightning components, with a strong foundation in data management and AI integration. Certified in Salesforce Administration, AI, 
+                    nd Data Engineering, with a passion for building scalable and efficient solutions.</p>
+                <div class="btn-sci">
+                    <a href="#contact" class="btn">Download CV</a>
+                    <div class="sci">
+                        <a href="#"><i class='bx bxl-github'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="bg-gray-800 p-4 shadow rounded">
-                <h3 class="text-xl font-semibold">Third-Party API Integration</h3>
-                <p class="text-gray-400">Integrated Salesforce with external services using REST APIs.</p>
+        </section>
+
+        <!-- Services Section with Cards -->
+        <section id="services" class="container mx-auto h-screen max-w-12xl">
+            <h2 class="text-3xl font-semibold mb-4 text-center">Experience</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Experience Card 1 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Salesforce Developer at XYZ Corp</h3>
+                    <p class="text-gray-400">Developed and customized Salesforce applications, implemented automation processes, and created Lightning Web Components to enhance business processes.</p>
+                </div>
+
+                <!-- Experience Card 2 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Data Analyst at ABC Ltd</h3>
+                    <p class="text-gray-400">Analyzed data and provided insights to guide strategic decisions, built and maintained reports and dashboards, and improved data-driven decision-making.</p>
+                </div>
+
+                <!-- Experience Card 3 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Web Developer at Web Solutions</h3>
+                    <p class="text-gray-400">Designed and developed responsive websites using modern web technologies, focusing on creating engaging user experiences and optimizing performance.</p>
+                </div>
+
+                <!-- Experience Card 4 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Freelancer - Web & Salesforce Projects</h3>
+                    <p class="text-gray-400">Worked on various freelance projects involving Salesforce development, web development, and automation, providing custom solutions for clients in diverse industries.</p>
+                </div>
+
+                <!-- Experience Card 5 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Software Engineer at Tech Innovations</h3>
+                    <p class="text-gray-400">Developed software solutions for clients, focusing on scalable architecture, optimizing backend processes, and ensuring high performance and security in applications.</p>
+                </div>
             </div>
+        </section>
+        
+        <div id="resume" class="container mx-auto text-white h-screen flex">
+            <!-- Sidebar -->
+            <aside class="w-1/4 bg-gray-800 p-6 flex flex-col justify-start gap-4">
+                <h2 class="text-2xl font-bold mb-6 text-center">For Hire Me</h2>
+                <a href="#" data-section="experience" class="p-3 rounded-md hover:bg-gray-700 section-link">Experience</a>
+                <a href="#" data-section="education" class="p-3 rounded-md hover:bg-gray-700 section-link">Education</a>
+                <a href="#" data-section="skills" class="p-3 rounded-md hover:bg-gray-700 section-link">Skills</a>
+                <a href="#" data-section="projects" class="p-3 rounded-md hover:bg-gray-700 section-link">Projects</a>
+                <a href="#" data-section="contact" class="p-3 rounded-md hover:bg-gray-700 section-link">Contact Me</a>
+            </aside>
+        
+            <!-- Content Area -->
+            <div class="w-3/4 p-6 overflow-y-auto resume-detail">
+        
+                <!-- Experience Section -->
+                <section id="experience" class="section-content mb-8">
+                    <h2 class="text-3xl font-semibold mb-4 text-center">Experience</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-semibold mb-2">Salesforce Developer</h3>
+                            <p class="text-gray-400">XYZ Company | 2023 - Present</p>
+                            <p class="mt-2">Developed Lightning Web Components, Flows, and API integrations.</p>
+                        </div>
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-semibold mb-2">Web Developer</h3>
+                            <p class="text-gray-400">Freelance | 2021 - 2023</p>
+                            <p class="mt-2">Built modern, responsive websites using Django, TailwindCSS, and JavaScript.</p>
+                        </div>
+                    </div>
+                </section>
+        
+                <!-- Education Section -->
+                <section id="education" class="section-content mb-8 hidden">
+                    <h2 class="text-3xl font-semibold mb-4 text-center">Education</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-semibold mb-2">Bachelor of Computer Science</h3>
+                            <p class="text-gray-400">XYZ University | 2018 - 2022</p>
+                        </div>
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-semibold mb-2">Salesforce Developer Training</h3>
+                            <p class="text-gray-400">Trailhead Academy | 2023</p>
+                        </div>
+                    </div>
+                </section>
+        
+                <!-- Skills Section -->
+                <section id="skills" class="skills section-content mb-6 hidden">
+                    <h2 class="text-3xl font-semibold mb-4 text-center">Skills</h2>
+                    <div class="max-w-3xlr">
+                        <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-9">
+                            <div class="resume-item bg-gray-800 p-6 shadow-lg">
+                                <i class='bx bxl-css3' ></i>
+                                <span >Salesforce</span>
+                            </div>
+                            <div class="resume-item bg-gray-800 p-6 shadow-lg">
+                                <i class='bx bxl-tailwind-css' ></i>
+                                <span>Tailwind CSS</span>
+                            </div>
+                            <div class="resume-item bg-gray-800 p-6 shadow-lg">
+                                <i class='bx bxl-python' ></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="resume-item bg-gray-800 p-6 shadow-lg">
+                                <i class='bx bxl-django' ></i>
+                                <span>Django</span>
+                            </div>
+                            <div class="resume-item bg-gray-800 p-6 shadow-lg">
+                                <i class='bx bxl-javascript' ></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="resume-item bg-gray-800 p-6 shadow-lg">
+                                <i class='bx bxl-react' ></i>
+                                <span>React.js</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+        
+                <!-- Projects Section -->
+                <section id="projects" class="section-content mb-8 hidden">
+                    <h2 class="text-3xl font-semibold mb-4 text-center">Projects</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-semibold mb-2">Hotel Management System</h3>
+                            <p class="text-gray-400">Built a full-stack hotel room booking system with Django and TailwindCSS.</p>
+                        </div>
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-semibold mb-2">Salesforce Lead Automation</h3>
+                            <p class="text-gray-400">Automated lead assignments using Salesforce Flows and Process Builder.</p>
+                        </div>
+                    </div>
+                </section>
+        
+                <!-- Contact Section -->
+                <section id="contact" class="section-content mb-8 hidden">
+                    <h2 class="text-3xl font-semibold mb-4 text-center">Contact Me</h2>
+                    <p class="text-gray-400 text-center">Email: sandile@example.com</p>
+                    <p class="text-gray-400 text-center">LinkedIn: linkedin.com/in/sandilenkosi</p>
+                    <p class="text-gray-400 text-center">GitHub: github.com/sandile</p>
+                </section>
+            </div>
+        
+            <!-- JavaScript for toggling sections -->
+            <script>
+                const links = document.querySelectorAll(".section-link");
+                const sections = document.querySelectorAll(".section-content");
+        
+                links.forEach(link => {
+                    link.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        const targetSection = link.getAttribute("data-section");
+        
+                        sections.forEach(section => {
+                            section.classList.add("hidden");
+                        });
+        
+                        document.getElementById(targetSection).classList.remove("hidden");
+                    });
+                });
+            </script>
+        
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="p-6 bg-gray-800">
-        <h2 class="text-2xl font-semibold mb-2">Contact Me</h2>
-        <p>Email: your.email@example.com</p>
-        <p>LinkedIn: linkedin.com/in/yourname</p>
-        <p>GitHub: github.com/yourusername</p>
-    </section>
-
-    <!-- Footer -->
-    <footer class="p-4 bg-gray-800 text-white text-center">
-        <p>&copy; 2025 Your Name | Salesforce Developer</p>
-    </footer>
-</body>
+        
+    </body>
 </html>

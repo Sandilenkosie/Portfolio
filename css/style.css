@@ -1,0 +1,232 @@
+.navbar{
+    position: fixed;
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    padding: 25px 9%;
+    justify-content: space-between;
+    display: flex;
+    z-index: 100%;
+    visibility: hidden;
+    opacity: 0;
+    animation:  show-content 1.5s linear forwards;
+    animation-delay: 1.2s;
+}
+
+@keyframes show-content {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.navbar nav .active{
+    color:#a855f7;
+}
+
+.navbar .nav {
+    font-size: larger;
+    border: 2px #a855f7;
+
+}
+
+#home {
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    padding: 60px 8% 0;
+}
+
+.home-info h3 span {
+    position: relative;
+    display: inline-block;
+    color:transparent;
+    -webkit-text-stroke: .7px #a855f7;
+    animation: display-text 16s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+}
+
+@keyframes display-text {
+    25%,
+    100% {
+        display: none;
+    }
+}
+
+.home-info h3 span::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0%;
+    border-right:  2px solid #a855f7;
+    color:#a855f7;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+
+@keyframes fill-text {
+    10%,
+    100% {
+        width: 0%;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+.home-info .btn-sci{
+    display: flex;
+    font-size: 16px;
+    margin-top: center;
+    padding: 12px;
+}
+
+.btn{
+    display: inline-block;
+    padding:  10px 30px;
+    background: #a855f7;
+    border: 2px solid #a855f7;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #a855f7;
+    font-size: 16px;
+    color: #1a202c;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn:hover{
+    background: transparent;
+    color: #a855f7;
+    box-shadow: none;
+}
+
+.home-info .btn-sci .sci{
+    margin-left: 20px;
+}
+
+.home-info .btn-sci .sci a {
+    display: inline-flex;
+    padding: 8px;
+    border:  2px solid #a855f7;
+    border-radius:  50%;
+    font-size: 20px;
+    color: #a855f7;
+    margin: 0 8px;
+    transition: .5s;
+}
+
+.home-info .btn-sci .sci a:hover{
+    background: #a855f7;
+    color: #1a202c;
+    box-shadow: 0 0 10px #a855f7;
+}
+
+.bars-animation {
+position: absolute;
+width: 100%;
+height: 100%;
+display: flex;
+z-index: -1;
+}
+
+.bars-animation .bar {
+width: 100%;
+height: 100%;
+background: #1a202c;
+transform: translateY(-100%);
+animation: show-bars .5s ease-in-out forwards;
+animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes show-bars {
+100% { transform: translateY(0%); }
+}
+
+.home-img .img-box {
+position: relative;
+  width: 28vw;
+  height: 28vw;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.home-img .img-box::before,
+.home-img .img-box::after {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: conic-gradient(transparent, transparent, transparent, #a855f7);
+  transform: rotate(0deg);
+  animation: rotate-border 10s linear infinite;
+}
+
+.home-img .img-box::after{
+animation-delay: -5s;
+}
+
+@keyframes rotate-border {
+100% { 
+    transform: rotate(360deg);
+ }
+}
+
+.home-img .img-box .img-item{
+position: relative;
+width: 100%;
+height: 100%;
+background: #1a202c;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+z-index: 1;
+overflow: hidden;
+}
+
+.home-img .img-box .img-item img{
+position: absolute;
+display: block;
+width: 100%;
+object-fit: cover;
+mix-blend-mode:luminosity;
+}
+
+.resume-detail .skills .resume-item {
+    position: relative;
+    align-items: center;
+    overflow: visible;
+}
+
+.resume-detail .skills .resume-item i {
+    font-size: 8.5rem;
+}
+
+.resume-detail .skills .resume-item:hover i {
+    color: #a855f7;
+}
+
+.resume-detail .skills .resume-item span {
+    position: absolute;
+    top: -20%;
+    background: white;
+    color: #1a202c;
+    font-size: 1.6rem;
+    padding: .5rem 1rem;
+    border-radius: .6rem;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(.9);
+    transition: .2s;
+}
+
+.resume-detail .skills .resume-item:hover span{
+    top: -25%;
+    opacity: 1;
+    transform: scale(1);
+}
