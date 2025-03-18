@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesforce Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header Section -->
+    <header class="bg-gray-800 p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">GH-ST____</div>
+            <nav class="space-x-6">
+                <a href="#home" class="hover:text-purple-400">Home</a>
+                <a href="#skills" class="hover:text-purple-400">Skills</a>
+                <a href="#projects" class="hover:text-purple-400">Projects</a>
+            </nav>
+            <div>
+                <a href="#contact" class="hover:text-purple-400">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Section with Image -->
+    <section id="home" class="p-10 flex flex-col md:flex-row items-center justify-center gap-6 bg-gray-900">
+        <div>
+            <img src="img/home.png" alt="Your Photo" class="w-[400px] h-[400px] object-cover rounded-full shadow-lg border-4 border-purple-600">
+        </div>
+        <div class="text-center md:text-left">
+            <h2 class="text-4xl font-bold text-purple-400">Hi, I'm Your Name</h2>
+            <h3 class="text-2xl font-semibold mt-2">Salesforce Developer</h3>
+            <p class="text-gray-400 mt-4">Passionate about automation, Lightning Web Components, and customizing Salesforce to drive business success.</p>
+            <a href="#contact" class="mt-6 inline-block bg-purple-600 text-white py-2 px-4 rounded shadow-md transform hover:bg-white transition-colors duration-300">Contact Me</a>
+
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="p-6 bg-gray-800">
+        <h2 class="text-2xl font-semibold mb-2">Skills</h2>
+        <ul class="list-disc pl-5">
+            <li>Salesforce Configuration & Customization</li>
+            <li>Apex, Lightning Components, Flows</li>
+            <li>TailwindCSS, HTML, JavaScript</li>
+            <li>Integrations & API Development</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="p-6">
+        <h2 class="text-2xl font-semibold mb-2">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-gray-800 p-4 shadow rounded">
+                <h3 class="text-xl font-semibold">Sales Process Automation</h3>
+                <p class="text-gray-400">Built an automated lead-to-opportunity process using flows and process builder.</p>
+            </div>
+            <div class="bg-gray-800 p-4 shadow rounded">
+                <h3 class="text-xl font-semibold">Custom Lightning App</h3>
+                <p class="text-gray-400">Developed a custom app with Lightning Web Components for better UX.</p>
+            </div>
+            <div class="bg-gray-800 p-4 shadow rounded">
+                <h3 class="text-xl font-semibold">Third-Party API Integration</h3>
+                <p class="text-gray-400">Integrated Salesforce with external services using REST APIs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="p-6 bg-gray-800">
+        <h2 class="text-2xl font-semibold mb-2">Contact Me</h2>
+        <p>Email: your.email@example.com</p>
+        <p>LinkedIn: linkedin.com/in/yourname</p>
+        <p>GitHub: github.com/yourusername</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-4 bg-gray-800 text-white text-center">
+        <p>&copy; 2025 Your Name | Salesforce Developer</p>
+    </footer>
+</body>
+</html>
