@@ -1,5 +1,6 @@
-
-
+*{
+    scroll-behavior: smooth;
+}
 
 .navbar{
     position: fixed;
@@ -23,9 +24,14 @@
     }
 }
 
-.navbar nav .active{
-    color:#a855f7;
+.section-box {
+    padding: 25px 9%;
 }
+
+.nav-link.active {
+    color: #a855f7;
+}
+
 
 .navbar .nav {
     font-size: larger;

@@ -16,3 +16,10 @@ links.forEach(link => {
         link.classList.add("active");
     });
 });
+
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+        link.classList.add('active');
+    });
+});
