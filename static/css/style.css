@@ -238,25 +238,4 @@ mix-blend-mode:luminosity;
     color: #fff;
 }
 
-/* Add 3D perspective to the cards container */
-#services .grid > div {
-    perspective: 1000px;
-  }
-  
-  /* Make the card flip */
-  #services .grid > div:hover {
-    transform: rotateY(360deg);
-    transition: transform 2s ease;
-  }
-  
-  /* Ensure that the content of the card stays in place when flipped */
-  #services .grid > div {
-    display: inline-block;
-    transform-style: preserve-3d;
-    transition: transform 2s ease;
-  }
-  
-  #services .grid > div > div {
-    backface-visibility: hidden;
-  }
 
