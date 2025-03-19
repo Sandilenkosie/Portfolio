@@ -13,12 +13,12 @@
         <navbar class="p-4 bg-gray-900 navbar">
             <div class="container mx-auto flex justify-between items-center">
                 <a href="#home" class="text-2xl font-bold">GH-ST___</a>
-
+        
                 <nav class="nav space-x-6">
-                    <a href="#home" class="active hover:text-purple-400">Home</a>
-                    <a href="#services" class="hover:text-purple-400">Services</a>
-                    <a href="#resume" class="hover:text-purple-400">Resume</a>
-                    <a href="#" data-section="contact" class="hover:text-purple-400">Contact</a>
+                    <a href="#home" class="nav-link hover:text-purple-400">Home</a>
+                    <a href="#services" class="nav-link hover:text-purple-400">Services</a>
+                    <a href="#resume" class="nav-link hover:text-purple-400">Resume</a>
+                    <a href="#contact" class="nav-link hover:text-purple-400">Contact</a>
                 </nav>
             </div>
         </navbar>
@@ -358,6 +358,53 @@
                 });
             </script>
 
+            <!-- JavaScript -->
+            <script>
+                // Smooth Scroll and Active Link Highlighting
+                document.querySelectorAll('.nav-link').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+
+                        // Get the target section
+                        const targetId = this.getAttribute('href').substring(1);
+                        const targetSection = document.getElementById(targetId);
+
+                        // Smooth scroll to the section
+                        window.scrollTo({
+                            top: targetSection.offsetTop,
+                            behavior: 'smooth'
+                        });
+
+                        // Highlight the active link
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.classList.remove('text-gray-300'); // Remove highlight from other links
+                        });
+                        this.classList.add('text-gray-300'); // Add highlight to clicked link
+                    });
+                });
+
+                // Intersection Observer to trigger pop effect when section enters the viewport
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        const section = entry.target;
+
+                        if (entry.isIntersecting) {
+                            section.classList.add('popSection'); // Trigger pop animation
+                        } else {
+                            // We do not remove the class here, so animation will trigger each time section is in view
+                            // section.classList.remove('popSection'); // Don't remove class on exit
+                        }
+                    });
+                }, {
+                    threshold: 0.5 // Trigger when 50% of the section is in the viewport
+                });
+
+                // Target all sections
+                document.querySelectorAll('section').forEach(section => {
+                    observer.observe(section);
+                });
+            </script>
+
+
         
         </div>
         
@@ -380,4 +427,5 @@
             </div>
         </div>
     </footer>
+    
 </html>

@@ -230,10 +230,6 @@ mix-blend-mode:luminosity;
     transform: scale(1);
 }
 
-.section-link.active {
-    background-color: #a855f7;
-    color: #fff;
-}
 
 /* Add 3D perspective to the cards container */
 #services .grid > div {
@@ -256,3 +252,28 @@ mix-blend-mode:luminosity;
   #services .grid > div > div {
     backface-visibility: hidden;
   }
+
+      /* Pop animation */
+      @keyframes pop {
+        0% {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+        50% {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .popSection {
+        animation: pop 0.6s ease-out forwards;
+    }
+
+    /* Styling for active navbar link */
+    .nav-link.active {
+        color: #9f7aea; /* Set color for active link */
+    }
