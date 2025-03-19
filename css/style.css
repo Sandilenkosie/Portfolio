@@ -136,12 +136,12 @@ width: 100%;
 height: 100%;
 background: #1a202c;
 transform: translateY(-100%);
-animation: show-bars .5s ease-in-out forwards;
-animation-delay: calc(.1s * var(--i));
+animation: show-bars 10s ease infinite;
+animation-delay: calc(.6s * var(--i));
 }
 
 @keyframes show-bars {
-100% { transform: translateY(0%); }
+100% { transform: translateY(100%); }
 }
 
 .home-img .img-box {
@@ -230,3 +230,30 @@ mix-blend-mode:luminosity;
     opacity: 1;
     transform: scale(1);
 }
+
+.section-link.active {
+    background-color: #a855f7;
+    color: #fff;
+}
+
+/* Add 3D perspective to the cards container */
+#services .grid > div {
+    perspective: 1000px;
+  }
+  
+  /* Make the card flip */
+  #services .grid > div:hover {
+    transform: rotateY(360deg);
+    transition: transform 2s ease;
+  }
+  
+  /* Ensure that the content of the card stays in place when flipped */
+  #services .grid > div {
+    display: inline-block;
+    transform-style: preserve-3d;
+    transition: transform 2s ease;
+  }
+  
+  #services .grid > div > div {
+    backface-visibility: hidden;
+  }

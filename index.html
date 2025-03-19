@@ -12,31 +12,34 @@
         <!-- Header Section -->
         <navbar class="p-4 bg-gray-900 navbar">
             <div class="container mx-auto flex justify-between items-center">
-                <div class="text-2xl font-bold">GH-ST___</div>
+                <a href="#home" class="text-2xl font-bold">GH-ST___</a>
+
                 <nav class="nav space-x-6">
                     <a href="#home" class="active hover:text-purple-400">Home</a>
                     <a href="#services" class="hover:text-purple-400">Services</a>
                     <a href="#resume" class="hover:text-purple-400">Resume</a>
-                    <a href="#certifications" class="hover:text-purple-400">Certifications</a>
+                    <a href="#" data-section="contact" class="hover:text-purple-400">Contact</a>
                 </nav>
             </div>
         </navbar>
 
-    <div class="bars-animation">
-        <div class="bar" style="--i:6;"></div>
-        <div class="bar" style="--i:5;"></div>
-        <div class="bar" style="--i:4;"></div>
-        <div class="bar" style="--i:3;"></div>
-        <div class="bar" style="--i:2;"></div>
-        <div class="bar" style="--i:1;"></div>
-    </div>
+        <div class="bars-animation">
+            <div class="bar" style="--i:8;"></div>
+            <div class="bar" style="--i:7;"></div>
+            <div class="bar" style="--i:6;"></div>
+            <div class="bar" style="--i:5;"></div>
+            <div class="bar" style="--i:4;"></div>
+            <div class="bar" style="--i:3;"></div>
+            <div class="bar" style="--i:2;"></div>
+            <div class="bar" style="--i:1;"></div>
+        </div>
 
         <!-- Home Section with Image -->
-        <section id="home" class="p-10 flex flex-col md:flex-row items-center justify-center gap-6v">
+        <section id="home" class="p-10 flex flex-col md:flex-row items-center justify-center gap-6">
             <div class="home-img">
                 <div class="img-box">
                     <div class="img-item">
-                    <img src="img/pexels-mikhail-nilov-6964348.jpg" alt="Your Photo">
+                        <img src="static/img/pexels-mikhail-nilov-6964348.jpg" alt="Your Photo">
                     </div>
                 </div>
             </div>
@@ -50,20 +53,22 @@
                 </h3>
                 <p class="mt-4">A motivated Junior Salesforce Developer with 1 year of experience in Salesforce development, 
                     customization, and automation. Proficient in Apex, Flow, and Lightning components, with a strong foundation in data management and AI integration. Certified in Salesforce Administration, AI, 
-                    nd Data Engineering, with a passion for building scalable and efficient solutions.</p>
+                    and Data Engineering, with a passion for building scalable and efficient solutions.</p>
                 <div class="btn-sci">
-                    <a href="#contact" class="btn">Download CV</a>
+                    <a href="static/SandileNkosiResume.pdf" class="btn" download>Download CV</a>
                     <div class="sci">
-                        <a href="#"><i class='bx bxl-github'></i></a>
-                        <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                        <a href="https://github.com/sandilenkosie"><i class='bx bxl-github'></i></a>
+                        <a href="https://linkedin.com/in/sandilenkosie"><i class='bx bxl-linkedin' ></i></a>
+                        <a href="mailto:sandilenkosie06@gmail.com"><i class='bx bxl-gmail' ></i></a>
                     </div>
                 </div>
             </div>
         </section>
 
+
         <!-- Services Section with Cards -->
         <section id="services" class="container mx-auto h-screen max-w-12xl">
-            <h2 class="text-3xl font-semibold mb-4 text-center">Experience</h2>
+            <h2 class="text-3xl font-semibold mb-4 text-center">Services</h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Experience Card 1 -->
@@ -98,15 +103,15 @@
             </div>
         </section>
         
-        <div id="resume" class="container mx-auto text-white h-screen flex">
+        <div id="resume" class="container mx-auto text-white h-screen flex tabs">
             <!-- Sidebar -->
             <aside class="w-1/4 bg-gray-800 p-6 flex flex-col justify-start gap-4">
                 <h2 class="text-2xl font-bold mb-6 text-center">For Hire Me</h2>
-                <a href="#" data-section="experience" class="p-3 rounded-md hover:bg-gray-700 section-link">Experience</a>
+                <a href="#" data-section="experience" class="p-3 rounded-md hover:bg-gray-700 section-link active">Experience</a>
                 <a href="#" data-section="education" class="p-3 rounded-md hover:bg-gray-700 section-link">Education</a>
                 <a href="#" data-section="skills" class="p-3 rounded-md hover:bg-gray-700 section-link">Skills</a>
                 <a href="#" data-section="projects" class="p-3 rounded-md hover:bg-gray-700 section-link">Projects</a>
-                <a href="#" data-section="contact" class="p-3 rounded-md hover:bg-gray-700 section-link">Contact Me</a>
+                <a href="#" data-section="contact" class="p-3 rounded-md hover:bg-gray-700 section-link">Contact</a>
             </aside>
         
             <!-- Content Area -->
@@ -118,31 +123,90 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
                             <h3 class="text-xl font-semibold mb-2">Salesforce Developer</h3>
-                            <p class="text-gray-400">XYZ Company | 2023 - Present</p>
-                            <p class="mt-2">Developed Lightning Web Components, Flows, and API integrations.</p>
+                            <p class="text-gray-400">Quarphix Company | Aug 2024 - Present</p>
+                            <p class="mt-2">As a Salesforce Developer, I developed Lightning Web Components, Flows, 
+                                and API integrations to enhance user experience 
+                                and streamline business processes. 
+                                I also utilized SOQL for querying Salesforce data and created Apex trigger 
+                                classes to automate workflows and maintain data integrity.</p>
+                        </div>
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-semibold mb-2">Data Analyst</h3>
+                            <p class="text-gray-400">Phuthuma Technologies | Feb 2021 - May 2021</p>
+                            <p class="mt-2">Analyze and interpret complex datasets to provide actionable insights that drive business decisions. 
+                                I utilize statistical tools and data visualization techniques to uncover trends, 
+                                improve processes, and support strategic planning.</p>
                         </div>
                         <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
                             <h3 class="text-xl font-semibold mb-2">Web Developer</h3>
-                            <p class="text-gray-400">Freelance | 2021 - 2023</p>
+                            <p class="text-gray-400">Freelance | 2019 - Present</p>
                             <p class="mt-2">Built modern, responsive websites using Django, TailwindCSS, and JavaScript.</p>
                         </div>
                     </div>
                 </section>
         
                 <!-- Education Section -->
+                <!-- Education Section -->
                 <section id="education" class="section-content mb-8 hidden">
                     <h2 class="text-3xl font-semibold mb-4 text-center">Education</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-semibold mb-2">Bachelor of Computer Science</h3>
-                            <p class="text-gray-400">XYZ University | 2018 - 2022</p>
+                            <h3 class="text-xl font-semibold mb-2">Diploma in Information Technology</h3>
+                            <p class="text-gray-400">Durban University of Technology | 2017 - 2019</p>
                         </div>
                         <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-semibold mb-2">Salesforce Developer Training</h3>
-                            <p class="text-gray-400">Trailhead Academy | 2023</p>
+                            <h3 class="text-xl font-semibold mb-2">Advanced in Information Technology</h3>
+                            <p class="text-gray-400">Durban University of Technology | 2020</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-3xl font-semibold mb-4 text-center mt-6">Acquired Certificates</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-semibold mb-2">Salesforce Certified Administrator</h3>
+                            <p class="text-gray-400">Demonstrated proficiency in Salesforce administration, including managing users, data, and security, as well as automating business processes and generating reports and dashboards.</p>
+                            <p class="text-gray-400">Salesforce | 2024</p>
+                            <a href="static/Cert4933899_Administrator_20240927.pdf" download="SalesforceCertifiedAdministrator.pdf" 
+                            class="bg-transparent text-white p-2 rounded-lg shadow-lg hover:bg-purple-800 hover:text-white transition duration-300 mt-4 block text-center"
+                            title="Click to Download Salesforce Certified Administrator Certificate">
+                                <i class='bx bxs-file-pdf text-2xl'></i> Download
+                            </a>
+                        </div>
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-semibold mb-2">Salesforce AI Certified Associate</h3>
+                            <p class="text-gray-400">Validates knowledge of AI concepts and tools like Einstein within the Salesforce ecosystem. It focuses on AI applications for data insights, automation, and enhancing business processes.</p>
+                            <p class="text-gray-400">Salesforce | 2024</p>
+                            <a href="static/Cert5099583_AIAssociate_20241022.pdf" download="SalesforceAICertifiedAssociate.pdf" 
+                            class="bg-transparent text-white p-2 rounded-lg shadow-lg hover:bg-purple-800 hover:text-white transition duration-300 mt-4 block text-center"
+                            title="Click to Download Salesforce AI Certified Associate Certificate">
+                                <i class='bx bxs-file-pdf text-2xl'></i> Download  
+                            </a>
+                        </div>
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-semibold mb-2">Salesforce AI Certified Specialist</h3>
+                            <p class="text-gray-400">Demonstrates expertise in implementing AI solutions using Salesforce tools like Einstein. It focuses on designing, deploying, and optimizing AI-driven workflows to enhance business outcomes.</p>
+                            <p class="text-gray-400">Salesforce | 2024</p>
+                            <a href="static/Cert5401075_AISpecialist_20241205.pdf" download="SalesforceAICertifiedSpecialist.pdf" 
+                            class="bg-transparent text-white p-2 rounded-lg shadow-lg hover:bg-purple-800 hover:text-white transition duration-300 mt-4 block text-center"
+                            title="Click to Download Salesforce AI Certified Specialist Certificate">
+                                <i class='bx bxs-file-pdf text-2xl'></i> Download
+                            </a>
+                        </div>
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-semibold mb-2">Microsoft Certified: Data Engineer Associate</h3>
+                            <p class="text-gray-400">Validated expertise in designing, implementing, and maintaining data solutions using Microsoft Azure, with a focus on data storage, processing, and security.</p>
+                            <p class="text-gray-400">Microsoft Learn | 2022 - 2025</p>
+                            <a href="static/Certifications - Sandile Nkosi _ Microsoft Learn.pdf" download="MicrosoftCertifiedDataEngineerAssociate.pdf" 
+                            class="bg-transparent text-white p-2 rounded-lg shadow-lg hover:bg-purple-800 hover:text-white transition duration-300 mt-4 block text-center"
+                            title="Click to Download Microsoft Certified Data Engineer Associate Certificate">
+                                <i class='bx bxs-file-pdf text-2xl'></i> Download
+                            </a>
                         </div>
                     </div>
                 </section>
+
+
+
         
                 <!-- Skills Section -->
                 <section id="skills" class="skills section-content mb-6 hidden">
@@ -151,7 +215,7 @@
                         <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-9">
                             <div class="resume-item bg-gray-800 p-6 shadow-lg">
                                 <i class='bx bxl-css3' ></i>
-                                <span >Salesforce</span>
+                                <span >CSS</span>
                             </div>
                             <div class="resume-item bg-gray-800 p-6 shadow-lg">
                                 <i class='bx bxl-tailwind-css' ></i>
@@ -182,23 +246,81 @@
                 <section id="projects" class="section-content mb-8 hidden">
                     <h2 class="text-3xl font-semibold mb-4 text-center">Projects</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Hotel Management System Project -->
                         <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
                             <h3 class="text-xl font-semibold mb-2">Hotel Management System</h3>
-                            <p class="text-gray-400">Built a full-stack hotel room booking system with Django and TailwindCSS.</p>
+                            <p class="text-gray-400">Built a full-stack hotel room booking system with C# and MVC.</p>
+                            <!-- Demo Video for Hotel Management System -->
+                            <div class="video-container mt-4">
+                                <video width="100%" height="315" controls>
+                                    <source src="static/img/hotel-management-demo.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
                         </div>
+                
+                        <!-- Interns Tracking System Project -->
                         <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-semibold mb-2">Salesforce Lead Automation</h3>
-                            <p class="text-gray-400">Automated lead assignments using Salesforce Flows and Process Builder.</p>
+                            <h3 class="text-xl font-semibold mb-2">Interns Tracking System</h3>
+                            <p class="text-gray-400">Salesforce-based system to track, measure, and optimize intern performance.</p>
+                            <!-- Demo Video for Interns Tracking System -->
+                            <div class="video-container mt-4">
+                                <video width="100%" height="315" controls>
+                                    <source src="static/Intern_Tracking_demo.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+
+                
+                        <!-- Test-Engine-Exam Project -->
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-semibold mb-2">Test-Engine-Exam</h3>
+                            <p class="text-gray-400">I built a simulated testing platform using Django, JavaScript, and Tailwind CSS to help 
+                                candidates prepare for certification exams and skill assessments.</p>
+                            <!-- Demo Video for Test-Engine-Exam -->
+                            <div class="video-container mt-4">
+                                <video width="100%" height="315" controls>
+                                    <source src="static/img/test-engine-demo.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
                         </div>
                     </div>
                 </section>
+                
+                
         
                 <!-- Contact Section -->
-                <section id="contact" class="section-content mb-8 hidden">
-                    <h2 class="text-3xl font-semibold mb-4 text-center">Contact Me</h2>
-                    <p class="text-gray-400 text-center">Email: sandile@example.com</p>
-                    <p class="text-gray-400 text-center">LinkedIn: linkedin.com/in/sandilenkosi</p>
-                    <p class="text-gray-400 text-center">GitHub: github.com/sandile</p>
+                <section id="contact" class="section-content mb-8 flex items-center justify-center hidden">
+                    <div class="text-center">
+                        <h2 class="text-3xl font-semibold mb-4 text-white">Contact Me</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+                            <!-- Email Card -->
+                            <div class="bg-gray-700 p-6 rounded-lg shadow-lg hover:bg-purple-500 transition duration-300">
+                                <a href="mailto:sandilenkosie06@gmail.com" class="flex items-center justify-center space-x-2 text-white">
+                                    <i class='bx bxl-gmail text-3xl'></i>
+                                    <span>Email: sandilenkosie06@gmail.com</span>
+                                </a>
+                            </div>
+                
+                            <!-- LinkedIn Card -->
+                            <div class="bg-gray-700 p-6 rounded-lg shadow-lg hover:bg-purple-500 transition duration-300">
+                                <a href="https://linkedin.com/in/sandilenkosie" target="_blank" class="flex items-center justify-center space-x-2 text-white">
+                                    <i class='bx bxl-linkedin text-3xl'></i>
+                                    <span>LinkedIn: linkedin.com/in/sandilenkosie</span>
+                                </a>
+                            </div>
+                
+                            <!-- GitHub Card -->
+                            <div class="bg-gray-700 p-6 rounded-lg shadow-lg hover:bg-purple-500 transition duration-300">
+                                <a href="https://github.com/sandilenkosie" target="_blank" class="flex items-center justify-center space-x-2 text-white">
+                                    <i class='bx bxl-github text-3xl'></i>
+                                    <span>GitHub: github.com/sandilenkosie</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </div>
         
@@ -206,20 +328,23 @@
             <script>
                 const links = document.querySelectorAll(".section-link");
                 const sections = document.querySelectorAll(".section-content");
-        
+
                 links.forEach(link => {
                     link.addEventListener("click", (e) => {
                         e.preventDefault();
+
+                        // Handle section visibility
                         const targetSection = link.getAttribute("data-section");
-        
-                        sections.forEach(section => {
-                            section.classList.add("hidden");
-                        });
-        
+                        sections.forEach(section => section.classList.add("hidden"));
                         document.getElementById(targetSection).classList.remove("hidden");
+
+                        // Handle active link styling
+                        links.forEach(l => l.classList.remove("active"));
+                        link.classList.add("active");
                     });
                 });
             </script>
+
         
         </div>
         
