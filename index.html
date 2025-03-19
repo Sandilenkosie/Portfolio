@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="static/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-    <body class="py-3 px-4 sm:px-10 bg-gray-900 text-white font-[sans-serif]">
+    <body class="py-3 px-4 sm:px-10 bg-gray-900 text-white font-[serif]">
         <!-- Header Section -->
         <navbar class="navbar">
             <div class="container mx-auto flex justify-between items-center">
@@ -205,9 +205,6 @@
                         </div>
                     </div>
                 </section>
-
-
-
         
                 <!-- Skills Section -->
                 <section id="skills" class="skills section-content mb-6 hidden">
@@ -253,10 +250,10 @@
                             <p class="text-gray-400">Built a full-stack hotel room booking system with C# and MVC.</p>
                             <!-- Demo Video for Hotel Management System -->
                             <div class="video-container mt-4">
-                                <video width="100%" height="315" controls>
+                                <video width="100%" height="315" controls onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                                     <source src="static/img/hotel-management-demo.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
                                 </video>
+                                <p class="text-gray-400 text-center hidden">Coming Soon...</p>
                             </div>
                         </div>
                 
@@ -266,13 +263,12 @@
                             <p class="text-gray-400">Salesforce-based system to track, measure, and optimize intern performance.</p>
                             <!-- Demo Video for Interns Tracking System -->
                             <div class="video-container mt-4">
-                                <video width="100%" height="315" controls>
+                                <video width="100%" height="315" controls onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                                     <source src="static/Intern_Tracking_demo.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
                                 </video>
+                                <p class="text-gray-400 text-center hidden">Coming Soon...</p>
                             </div>
                         </div>
-
                 
                         <!-- Test-Engine-Exam Project -->
                         <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
@@ -281,16 +277,14 @@
                                 candidates prepare for certification exams and skill assessments.</p>
                             <!-- Demo Video for Test-Engine-Exam -->
                             <div class="video-container mt-4">
-                                <video width="100%" height="315" controls>
+                                <video width="100%" height="315" controls onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                                     <source src="static/img/test-engine-demo.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
                                 </video>
+                                <p class="text-gray-400 text-center hidden">Coming Soon...</p>
                             </div>
                         </div>
                     </div>
                 </section>
-                
-                
         
                 <!-- Contact Section -->
                 <section id="contact" class="section-content mb-8 flex items-center justify-center hidden">
