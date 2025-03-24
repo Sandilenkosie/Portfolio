@@ -66,8 +66,17 @@
             </div>
         </section>
 
-        <section id="about" class="section-box py-16 container mx-auto flex justify-center items-center min-h-screen">
-            <div class="bg-gray-800 shadow-lg rounded-lg overflow-hidden flex ">
+
+        
+        <section id="about" class="section-box py-16 min-h-screen flex flex-col justify-center items-center">
+            <!-- Heading -->
+            <h2 class="text-3xl font-semibold text-center mb-4">
+                About Me
+                <hr class="w-1/4 mx-auto mt-2 border-t-2 border-purple-600">
+            </h2>
+        
+            <!-- Content Card -->
+            <div class="container mx-auto bg-gray-800 shadow-lg rounded-lg overflow-hidden flex">
                 <!-- Left Side: Picture -->
                 <div class="w-2/6 p-2">
                     <img src="static/img/web-development.jpg" alt="Profile Picture" class="w-full h-full object-cover rounded-lg">
@@ -75,7 +84,6 @@
         
                 <!-- Right Side: About Me Content -->
                 <div class="w-3/6 p-6">
-                    <h1 class="text-3xl font-bold mb-4">About Me</h1>
                     <p class="leading-relaxed">
                         I’m a motivated Junior Salesforce Developer with 1 year of hands-on experience in Salesforce development, customization, and automation. Skilled in Apex, Flow, and Lightning components, I bring a strong foundation in data management and AI integration.
                         <br><br>
@@ -86,13 +94,15 @@
         </section>
         
         
-
-
-        <!-- Services Section with Cards -->
-        <section id="services" class="section-box py-16 container mx-auto">
-            <h2 class="text-3xl font-semibold mb-8 text-center">Services</h2>
         
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Services Section with Cards -->
+        <section id="services" class="section-box py-16 ">
+            <h2 class="text-3xl font-semibold text-center mb-4">
+                Services
+                <hr class="w-1/4 mx-auto mt-2 border-t-2 border-purple-600">
+            </h2>
+        
+            <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Service Card Template -->
                 <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:ring-2 hover:ring-gray-500/50">
                     <img src="static/img/web-development.jpg" alt="Web Development" class="w-32 h-32 object-cover rounded-full mb-4 mx-auto">
@@ -128,7 +138,10 @@
         </section>
 
         <section id="resume" class="py-16 section-box">
-            <h2 class="text-3xl font-semibold mb-4 text-center">Resume</h2>
+            <h2 class="text-3xl font-semibold text-center mb-4">
+                Resume
+                <hr class="w-1/4 mx-auto mt-2 border-t-2 border-purple-600">
+            </h2>
             <div class="container mx-auto flex flex-col md:flex-row gap-6">
                 <!-- Sidebar -->
                 <aside class="w-1/4 bg-gray-800 p-6 flex flex-col justify-start gap-4">
@@ -173,7 +186,7 @@
             
                     <!-- Education Section -->
                     <section id="education" class="section-content mb-8 hidden">
-                        <h2 class="text-3xl font-semibold mb-4 text-center">Education</h2>
+                        <h2 class="text-3xl font-semibold mb-4 text-center text-purple-600">Education</h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
                                 <h3 class="text-xl font-semibold mb-2">Diploma in Information Technology</h3>
@@ -185,7 +198,7 @@
                             </div>
                         </div>
     
-                        <h2 class="text-3xl font-semibold mb-4 text-center mt-6">Acquired Certificates</h2>
+                        <h2 class="text-3xl font-semibold mb-4 text-center mt-6">Acquired <span class="text-purple-600">Certificate</span></h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
                                 <h3 class="text-xl font-semibold mb-2">Salesforce Certified Administrator</h3>
@@ -232,7 +245,7 @@
             
                     <!-- Skills Section -->
                     <section id="skills" class="skills section-content mb-6 hidden">
-                        <h2 class="text-3xl font-semibold mb-4 text-center">Skills</h2>
+                        <h2 class="text-3xl font-semibold mb-4 text-center text-purple-600">Skills</h2>
                         <div class="max-w-3xlr">
                             <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-9">
                                 <div class="resume-item bg-gray-800 p-6 shadow-lg">
@@ -266,7 +279,7 @@
             
                     <!-- Projects Section -->
                     <section id="projects" class="section-content mb-8 hidden">
-                        <h2 class="text-3xl font-semibold mb-4 text-center">Projects</h2>
+                        <h2 class="text-3xl font-semibold mb-4 text-center text-purple-600">Projects</h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <!-- Hotel Management System Project -->
                             <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
@@ -349,7 +362,7 @@
 
                             <!-- Right Side: Contact Form -->
                             <form action="https://docs.google.com/forms/d/e/1FAIpQLSf8wzsgL1Z1Sl3_PgvTPtGJM9qiB1OEdn733G-hAZhrjTBMaA/viewform?usp=header" method="POST" class="bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-1/2">
-                                <h2 class="text-3xl font-semibold mb-4 text-white text-center">Contact Me</h2>
+                                <h2 class="text-3xl font-semibold mb-4 text-white text-center text-purple-600">Contact Me</h2>
                                 <div class="mb-4">
                                     <label for="name" class="block text-white text-left mb-2">Name</label>
                                     <input type="text" id="name" name="name" placeholder="Your Name" class="w-full p-3 rounded bg-gray-700 text-white outline-none focus:ring-2 focus:ring-purple-500">
