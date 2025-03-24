@@ -11,18 +11,34 @@
     <body class="bg-gray-900 text-white font-[serif]">
         <!-- Header Section -->
         <navbar class="navbar">
-            <div class="container mx-auto flex justify-between items-center">
+            <div class="container mx-auto flex justify-between items-center p-4">
                 <a href="#home" class="text-2xl font-bold">GH-ST___</a>
         
-                <nav class="nav space-x-6">
+                <!-- Mobile Hamburger Menu with Three Dashes -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-toggle" class="text-2xl focus:outline-none">
+                        &#x2261; <!-- Three horizontal dashes (≡) character -->
+                    </button>
+                </div>
+        
+                <!-- Navigation Links (Desktop and larger screens) -->
+                <nav class="hidden lg:flex space-x-6">
                     <a href="#home" class="nav-link active hover:text-purple-400">Home</a>
                     <a href="#about" class="nav-link hover:text-purple-400">About</a>
                     <a href="#services" class="nav-link hover:text-purple-400">Services</a>
                     <a href="#resume" class="nav-link hover:text-purple-400">Resume</a>
-                    <!-- <a href="#" class="nav-link hover:text-purple-400">Contact</a> -->
                 </nav>
+        
+                <!-- Mobile Menu (hidden by default) -->
+                <div id="mobile-menu" class="lg:hidden hidden absolute top-16 right-0 bg-white shadow-lg rounded-lg w-48 mt-2 space-y-4 p-4">
+                    <a href="#home" class="nav-link block hover:text-purple-400">Home</a>
+                    <a href="#about" class="nav-link block hover:text-purple-400">About</a>
+                    <a href="#services" class="nav-link block hover:text-purple-400">Services</a>
+                    <a href="#resume" class="nav-link block hover:text-purple-400">Resume</a>
+                </div>
             </div>
         </navbar>
+        
 
         <div class="bars-animation">
             <div class="bar" style="--i:8;"></div>
@@ -36,62 +52,64 @@
         </div>
 
         <!-- Home Section with Image -->
-        <section id="home" class="section-box flex flex-col md:flex-row items-center justify-center gap-6">
-            <div class="home-img flex flex-col justify-center items-center">
-                <div class="img-box">
+        <section id="home" class="section-box flex flex-col md:flex-row items-center justify-center gap-6 p-4">
+            <div class="home-img flex justify-center items-center w-full md:w-1/2">
+                <div class="img-box rounded-lg shadow-md overflow-hidden">
                     <div class="img-item">
-                        <img src="static/img/pexels-mikhail-nilov-6964348.jpg" alt="Your Photo" class="w-full h-auto object-cover rounded-lg shadow-md">
+                        <img src="static/img/pexels-mikhail-nilov-6964348.jpg" alt="Your Photo" class="w-full h-auto object-cover">
                     </div>
                 </div>
             </div>
-            
-            <div class="home-info">
+
+            <div class="home-info text-center md:text-left md:w-1/2">
                 <h2 class="text-4xl font-bold text-purple-600">Sandile Nkosi</h2>
-                <h3 class="text-2xl font-semibold mt-2">I am a 
+                <h3 class="text-2xl font-semibold mt-2">
+                    I am a 
                     <span style="--i:4;" data-text="Salesforce Developer">Salesforce Developer</span>
                     <span style="--i:3;" data-text="Data analysis">Data analysis</span>
                     <span style="--i:2;" data-text="Web Developer">Web Developer</span>
                     <span style="--i:1;" data-text="Freelancer">Freelancer</span>
                 </h3>
-                <p class="mt-4">Apex Development | Lightning Web Components (LWC) | Salesforce Flows | Salesforce Integration | <br>
-                    Lightning App Builder | Salesforce Security | Data Management | Deployment & CI/CD</p>
-                <div class="btn-sci">
-                    <a href="static/SandileNkosiResume.pdf" class="btn" download>Download CV</a>
-                    <div class="sci">
-                        <a href="https://github.com/sandilenkosie"><i class='bx bxl-github'></i></a>
-                        <a href="https://linkedin.com/in/sandilenkosie"><i class='bx bxl-linkedin' ></i></a>
-                        <a href="mailto:sandilenkosie06@gmail.com"><i class='bx bxl-gmail' ></i></a>
+                <p class="mt-4 text-lg">Apex Development | Lightning Web Components (LWC) | Salesforce Flows | Salesforce Integration | 
+                    Lightning App Builder | Salesforce Security | Data Management | Deployment & CI/CD
+                </p>
+                <div class="btn-sci mt-6 flex justify-center md:justify-start gap-6">
+                    <a href="static/SandileNkosiResume.pdf" class="btn px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-500 transition-colors" download>Download CV</a>
+                    <div class="sci flex gap-4">
+                        <a href="https://github.com/sandilenkosie" class="text-2xl text-gray-800 hover:text-purple-600 transition"><i class='bx bxl-github'></i></a>
+                        <a href="https://linkedin.com/in/sandilenkosie" class="text-2xl text-gray-800 hover:text-purple-600 transition"><i class='bx bxl-linkedin'></i></a>
+                        <a href="mailto:sandilenkosie06@gmail.com" class="text-2xl text-gray-800 hover:text-purple-600 transition"><i class='bx bxl-gmail'></i></a>
                     </div>
                 </div>
             </div>
         </section>
 
+
         <!-- Progress Circles Section -->
-        <section id="progress-section" class="section-box flex flex-col md:flex-row justify-center items-center gap-20">
+        <section id="progress-section" class="section-box flex flex-col md:flex-row justify-center items-center gap-12 p-6">
             <div class="text-center">
                 <div id="progress-experience" class="relative flex justify-center items-center">
                     <span id="experience-number" class="absolute text-2xl font-semibold">0</span>
                 </div>
-                <h3 class="text-xl font-semibold">Experie</h3>
+                <h3 class="text-xl font-semibold mt-4">Experience</h3>
             </div>
 
             <div class="text-center">
                 <div id="progress-project" class="relative flex justify-center items-center">
-                    +<span id="project-number" class="absolute text-2xl font-semibold">0</span>
+                    <span id="project-number" class="absolute text-2xl font-semibold">0</span>
                 </div>
-                <h3 class="text-xl font-semibold">Projects</h3>
+                <h3 class="text-xl font-semibold mt-4">Projects</h3>
             </div>
 
             <div class="text-center">
                 <div id="progress-skill" class="relative flex justify-center items-center">
                     <span id="skill-number" class="absolute text-2xl font-semibold">0</span>
                 </div>
-                <h3 class="text-xl font-semibold">Skills</h3>
+                <h3 class="text-xl font-semibold mt-4">Skills</h3>
             </div>
         </section>
-
-
         
+        <!-- About Section -->
         <section id="about" class="section-box py-16 min-h-screen flex flex-col justify-center items-center">
             <!-- Heading -->
             <h2 class="text-3xl font-semibold text-center mb-4">
@@ -100,14 +118,14 @@
             </h2>
             
             <!-- Content Card -->
-            <div class="container mx-auto bg-gray-800 shadow-lg rounded-lg overflow-hidden flex py-8 px-4">
+            <div class="container mx-auto bg-gray-800 shadow-lg rounded-lg overflow-hidden flex flex-col md:flex-row py-8 px-4">
                 <!-- Left Side: Picture -->
-                <div class="w-2/6 p-2">
+                <div class="w-full md:w-2/6 p-2">
                     <img src="static/img/web-development.jpg" alt="Profile Picture" class="w-full h-full object-cover rounded-lg">
                 </div>
                 
                 <!-- Right Side: About Me Content -->
-                <div class="w-3/6 p-6">
+                <div class="w-full md:w-3/6 p-6">
                     <h1 class="text-3xl font-semibold mb-4">About <span class="text-purple-600">Me</span></h1>
                     <p class="leading-relaxed">
                         I’m a motivated Junior Salesforce Developer with 1 year of hands-on experience in Salesforce development, customization, and automation. Skilled in Apex, Flow, and Lightning components, I bring a strong foundation in data management and AI integration.
@@ -117,44 +135,40 @@
                 </div>
             </div>
         </section>
-        
-        
-        
-        
+
         <!-- Services Section with Cards -->
-        <section id="services" class="section-box py-16 ">
+        <section id="services" class="section-box py-16">
             <h2 class="text-3xl font-semibold text-center mb-4">
                 Services
                 <hr class="w-1/4 mx-auto mt-2 border-t-2 border-purple-600">
             </h2>
-        
-            <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
                 <!-- Service Card Template -->
                 <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:ring-2 hover:ring-gray-500/50">
                     <img src="static/img/web-development.jpg" alt="Web Development" class="w-32 h-32 object-cover rounded-full mb-4 mx-auto">
                     <h3 class="text-xl font-semibold mb-4">Web Application Development</h3>
                     <p class="text-gray-400">Building dynamic, scalable web apps with user authentication, data handling, and real-time features using React, Django, or Flask.</p>
                 </div>
-        
+
                 <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:ring-2 hover:ring-gray-500/50">
                     <img src="static/img/data-cleaning.jpg" alt="Data Cleaning & Transformation" class="w-32 h-32 object-cover rounded-full mb-4 mx-auto">
                     <h3 class="text-xl font-semibold mb-4">Data Cleaning & Transformation</h3>
                     <p class="text-gray-400">Cleaning, transforming, and preparing raw data for analysis, ensuring accuracy and consistency in databases or spreadsheets.</p>
                 </div>
-        
+
                 <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:ring-2 hover:ring-gray-500/50">
                     <img src="static/img/pexels-mikhail-nilov-6964348.jpg" alt="Web Developer" class="w-32 h-32 object-cover rounded-full mb-4 mx-auto">
                     <h3 class="text-xl font-semibold mb-4">MQL5 Trading Automation</h3>
-                    <p class="text-gray-400">Developed and optimized trading algorithms, custom indicators, and automation scripts using MQL5 on the MetaTrader 5 platform. Enhanced market analysis capabilities, 
-                        implemented risk management strategies, and integrated external data for advanced trading logic</p>
+                    <p class="text-gray-400">Developed and optimized trading algorithms, custom indicators, and automation scripts using MQL5 on the MetaTrader 5 platform. Enhanced market analysis capabilities, implemented risk management strategies, and integrated external data for advanced trading logic.</p>
                 </div>
-        
+
                 <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:ring-2 hover:ring-gray-500/50">
                     <img src="static/img/salesforce-lightning.jpg" alt="Salesforce Lightning Development" class="w-32 h-32 object-cover rounded-full mb-4 mx-auto">
                     <h3 class="text-xl font-semibold mb-4">Salesforce Lightning Development</h3>
                     <p class="text-gray-400">Building modern, efficient Lightning Web Components (LWC) and Aura Components to enhance user experiences on Salesforce.</p>
                 </div>
-        
+
                 <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:ring-2 hover:ring-gray-500/50">
                     <img src="static/img/processed-D4E7FDCD-EBE7-456C-A168-1DFDDC987871.jpeg" alt="Salesforce Custom Development" class="w-32 h-32 object-cover rounded-full mb-4 mx-auto">
                     <h3 class="text-xl font-semibold mb-4">Salesforce Custom Development</h3>
@@ -163,6 +177,7 @@
             </div>
         </section>
 
+
         <section id="resume" class="py-16 section-box">
             <h2 class="text-3xl font-semibold text-center mb-4">
                 Resume
@@ -170,9 +185,8 @@
             </h2>
             <div class="container mx-auto flex flex-col md:flex-row gap-6">
                 <!-- Sidebar -->
-                <aside class="w-1/4 bg-gray-800 p-6 flex flex-col justify-start gap-4">
+                <aside class="w-full md:w-1/4 bg-gray-800 p-6 flex flex-col justify-start gap-4">
                     <h2 class="text-2xl font-bold mb-6 text-center text-white">Reasons To <span class="text-purple-600">Hire Me</span></h2>
-                    
                     <nav class="flex flex-col gap-4">
                         <a href="#" data-section="experience" class="flex items-center space-x-2 p-3 rounded-md text-white hover:bg-gray-700 section-link active">
                             <i class='bx bxs-cog text-xl'></i> <span>Experience</span>
@@ -192,10 +206,9 @@
                     </nav>
                 </aside>
                 
-            
                 <!-- Content Area -->
-                <div class="w-3/4 p-6 overflow-y-auto resume-detail">
-            
+                <div class="w-full md:w-3/4 p-6 overflow-y-auto resume-detail">
+                
                     <!-- Experience Section -->
                     <section id="experience" class="section-content mb-8">
                         <h2 class="text-3xl font-semibold mb-4 text-center text-purple-600">Experience</h2>
@@ -223,7 +236,7 @@
                             </div>
                         </div>
                     </section>
-            
+                
                     <!-- Education Section -->
                     <section id="education" class="section-content mb-8 hidden">
                         <h2 class="text-3xl font-semibold mb-4 text-center text-purple-600">Education</h2>
@@ -237,7 +250,7 @@
                                 <p class="text-gray-400">Durban University of Technology | 2020</p>
                             </div>
                         </div>
-    
+        
                         <h2 class="text-3xl font-semibold mb-4 text-center mt-6">Acquired <span class="text-purple-600">Certificate</span></h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
@@ -282,7 +295,7 @@
                             </div>
                         </div>
                     </section>
-            
+        
                     <!-- Skills Section -->
                     <section id="skills" class="skills section-content mb-6 hidden">
                         <h2 class="text-3xl font-semibold mb-4 text-center text-purple-600">Skills</h2>
@@ -424,9 +437,10 @@
                             </form>
                         </div>
                     </section>
-
                 </div>
+            </div>
         </section>
+        
 
         </div>
         
