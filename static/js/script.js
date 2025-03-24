@@ -27,9 +27,9 @@ document.querySelectorAll('.nav-link').forEach(link => {
 const containers = document.querySelectorAll("#progress-experience, #progress-project, #progress-skill");
 
 function startProgressBars() {
-    const values = [8, 90, 100];
+    const values = [1, 9, 100];
     const ids = ['experience-number', 'project-number', 'skill-number'];
-    const colors = ['#1a202c', '#a855f7'];  // Start and end colors
+    const colors = ['#e0befa', '#a855f7'];  // Start and end colors
 
     containers.forEach((container, index) => {
         // Clear any previous content (prevents double overlays)
@@ -38,7 +38,7 @@ function startProgressBars() {
         // Create a new progress bar
         const bar = new ProgressBar.Circle(container, {
             color: colors[0], // Initial color
-            trailColor: colors[0], // Color of the empty portion of the circle
+            trailColor: '#1a202c', // Color of the empty portion of the circle
             trailWidth: 1,
             duration: 3000,
             easing: 'bounce',
