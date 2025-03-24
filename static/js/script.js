@@ -86,6 +86,9 @@ navLinks.forEach(link => {
     });
 });
 
+window.onload = function () {
+    window.location.hash = "#home";
+};
 
 
 
