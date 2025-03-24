@@ -132,6 +132,44 @@
     box-shadow: 0 0 10px #a855f7;
 }
 
+/* Media Query for Small Screens (Smartphones) */
+@media screen and (max-width: 768px) {
+    .btn {
+        padding: 8px 20px; /* Adjust button padding for smaller screens */
+        font-size: 14px; /* Make the font smaller for mobile */
+        border-radius: 30px; /* Smaller border radius for mobile */
+    }
+
+    .home-info .btn-sci .sci {
+        margin-left: 10px; /* Reduce margin for smaller screens */
+    }
+
+    .home-info .btn-sci .sci a {
+        padding: 6px;
+        font-size: 18px; /* Adjust icon size */
+        margin: 0 6px; /* Reduce margin for smaller screens */
+    }
+}
+
+/* Additional Media Query for Extra Small Screens (Phones in Portrait Mode) */
+@media screen and (max-width: 480px) {
+    .btn {
+        padding: 6px 16px; /* Further reduce padding on very small screens */
+        font-size: 12px; /* Reduce font size even more */
+        border-radius: 25px; /* Even smaller border radius */
+    }
+
+    .home-info .btn-sci .sci {
+        margin-left: 5px; /* Further reduce margin */
+    }
+
+    .home-info .btn-sci .sci a {
+        padding: 5px;
+        font-size: 16px; /* Further reduce icon size */
+        margin: 0 4px; /* Further reduce margin */
+    }
+}
+
 .bars-animation {
 position: absolute;
 width: 100%;
