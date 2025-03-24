@@ -7,10 +7,9 @@
     left: 0%;
     right: 0%;
     width: 100%;
-    padding: 25px 9%;
+    padding: 10px 7%;
     justify-content: space-between;
     display: flex;
-    z-index: 100%;
     visibility: hidden;
     opacity: 0;
     animation:  show-content 1.5s linear forwards;
@@ -43,7 +42,7 @@
     display: flex;
     align-items: center;
     height: 80vh;
-    padding: 40px 9% 0;
+    padding: 70px 9% 0;
 }
 
 .home-info h3 span {

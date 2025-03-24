@@ -8,36 +8,37 @@
     <link rel="stylesheet" href="static/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-    <body class="bg-gray-900 text-white font-[serif]">
+    <body class="bg-gray-800 text-white font-[serif]">
         <!-- Header Section -->
-        <navbar class="navbar">
+        <nav class="navbar fixed top-0 left-0 w-full bg-gray-900 shadow-md z-50">
             <div class="container mx-auto flex justify-between items-center p-4">
                 <a href="#home" class="text-2xl font-bold">GH-ST___</a>
         
-                <!-- Mobile Hamburger Menu with Three Dashes -->
+                <!-- Mobile Hamburger Menu -->
                 <div class="lg:hidden">
                     <button id="mobile-menu-toggle" class="text-2xl focus:outline-none">
-                        &#x2261; <!-- Three horizontal dashes (≡) character -->
+                        &#x2261;
                     </button>
                 </div>
         
-                <!-- Navigation Links (Desktop and larger screens) -->
-                <nav class="hidden lg:flex space-x-6">
+                <!-- Desktop Navigation Links -->
+                <div class="hidden lg:flex space-x-6">
                     <a href="#home" class="nav-link active hover:text-purple-400">Home</a>
                     <a href="#about" class="nav-link hover:text-purple-400">About</a>
                     <a href="#services" class="nav-link hover:text-purple-400">Services</a>
                     <a href="#resume" class="nav-link hover:text-purple-400">Resume</a>
-                </nav>
+                </div>
         
-                <!-- Mobile Menu (hidden by default) -->
-                <div id="mobile-menu" class="lg:hidden hidden absolute top-16 right-0 bg-white shadow-lg rounded-lg w-48 mt-2 space-y-4 p-4">
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="lg:hidden hidden absolute top-16 right-0 shadow-lg rounded-lg w-48 mt-2 space-y-4 p-4">
                     <a href="#home" class="nav-link block hover:text-purple-400">Home</a>
                     <a href="#about" class="nav-link block hover:text-purple-400">About</a>
                     <a href="#services" class="nav-link block hover:text-purple-400">Services</a>
                     <a href="#resume" class="nav-link block hover:text-purple-400">Resume</a>
                 </div>
             </div>
-        </navbar>
+        </nav>
+        
         
 
         <div class="bars-animation">
