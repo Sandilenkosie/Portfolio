@@ -108,7 +108,7 @@
     display: flex;
     font-size: 16px;
     margin-top: center;
-    padding: 12px;
+    padding: 12px 0;
 }
 
 .btn{
@@ -116,7 +116,7 @@
     padding:  6px 10px;
     background: #a855f7;
     border: 2px solid #a855f7;
-    border-radius: 40px;
+    border-radius: 10px;
     box-shadow: 0 0 10px #a855f7;
     font-size: 16px;
     color: #1a202c;
@@ -304,8 +304,8 @@
 #progress-experience,
 #progress-project,
 #progress-skill {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
   }
 
   

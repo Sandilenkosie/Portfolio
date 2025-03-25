@@ -33,7 +33,7 @@ function startProgressBars() {
 
     containers.forEach((container, index) => {
         // Clear any previous content (prevents double overlays)
-        container.innerHTML = `<span id="${ids[index]}" class="absolute text-2xl font-semibold">0</span>`;
+        container.innerHTML = `<span id="${ids[index]}" class="absolute text-xl font-semibold">0</span>`;
 
         // Create a new progress bar
         const bar = new ProgressBar.Circle(container, {
