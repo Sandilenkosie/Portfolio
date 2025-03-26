@@ -33,7 +33,7 @@ function startProgressBars() {
 
     containers.forEach((container, index) => {
         // Clear any previous content (prevents double overlays)
-        container.innerHTML = `<span id="${ids[index]}" class="absolute text-2xl font-semibold">0</span>`;
+        container.innerHTML = `<span id="${ids[index]}" class="absolute text-xl font-semibold">0</span>`;
 
         // Create a new progress bar
         const bar = new ProgressBar.Circle(container, {
@@ -70,10 +70,25 @@ startProgressBars();
 
 
 // Toggle mobile menu
-document.getElementById("mobile-menu-toggle").addEventListener("click", function() {
-    const menu = document.getElementById("mobile-menu");
-    menu.classList.toggle("hidden");
+const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+const navLinks = document.querySelectorAll("#mobile-menu a");
+
+// Toggle menu visibility
+mobileMenuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
 });
+
+// Hide menu when a link is clicked
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+    });
+});
+
+window.onload = function () {
+    window.location.hash = "#home";
+};
 
 
 
