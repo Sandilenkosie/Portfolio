@@ -209,6 +209,26 @@ if (mobileMenuToggle && mobileMenu) {
   });
 }
 
+// AI stats card glow (mouse tracking)
+(() => {
+  const cards = document.querySelectorAll(".ai-stat");
+  if (!cards.length) return;
+
+  cards.forEach((card) => {
+    card.addEventListener(
+      "pointermove",
+      (e) => {
+        const r = card.getBoundingClientRect();
+        const mx = ((e.clientX - r.left) / r.width) * 100;
+        const my = ((e.clientY - r.top) / r.height) * 100;
+        card.style.setProperty("--mx", `${mx}%`);
+        card.style.setProperty("--my", `${my}%`);
+      },
+      { passive: true },
+    );
+  });
+})();
+
 const containers = document.querySelectorAll(
   "#progress-experience, #progress-project, #progress-skill",
 );
@@ -220,7 +240,7 @@ function startProgressBars() {
 
   containers.forEach((container, index) => {
     // Clear any previous content (prevents double overlays)
-    container.innerHTML = `<span id="${ids[index]}" class="absolute text-xl font-semibold">0</span>`;
+    container.innerHTML = `<span id="${ids[index]}" class="ai-stat__value">0</span>`;
 
     // Create a new progress bar
     const bar = new ProgressBar.Circle(container, {

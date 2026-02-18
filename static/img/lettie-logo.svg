@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="64" viewBox="0 0 240 64" fill="none" role="img" aria-label="Lettie logo">
+  <title>Lettie</title>
+
+  <defs>
+    <linearGradient id="lettieG" x1="0" y1="0" x2="240" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.96"/>
+      <stop offset="0.55" stop-color="#A855F7" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0.96"/>
+    </linearGradient>
+
+    <radialGradient id="lettieMark" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(20 20) rotate(45) scale(34)">
+      <stop stop-color="#A855F7" stop-opacity="0.9"/>
+      <stop offset="0.55" stop-color="#22D3EE" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#0B1220" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Mark (left) -->
+  <g filter="url(#shadow)">
+    <rect x="4" y="8" width="48" height="48" rx="14" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+    <rect x="4" y="8" width="48" height="48" rx="14" fill="url(#lettieMark)" opacity="0.85"/>
+
+    <!-- stylized L -->
+    <path d="M18 18V44H40" stroke="rgba(255,255,255,0.92)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- spark accent -->
+    <path d="M42 18l2.5 5.5L50 26l-5.5 2.5L42 34l-2.5-5.5L34 26l5.5-2.5L42 18z" fill="#22D3EE" fill-opacity="0.95"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g aria-hidden="true">
+    <text x="66" y="43" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
+          font-size="30" font-weight="800" letter-spacing="0.2" fill="url(#lettieG)">
+      Lettie
+    </text>
+  </g>
+</svg>

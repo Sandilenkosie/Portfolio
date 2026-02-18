@@ -22,6 +22,106 @@ body {
     color: var(--app-text);
 }
 
+/* ------------------------------
+   Logo (brand)
+   ------------------------------ */
+.site-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    color: var(--app-text);
+    text-decoration: none;
+    line-height: 1;
+    user-select: none;
+}
+
+.site-logo__svg {
+    display: block;
+    height: 44px;
+    width: auto;
+}
+
+.site-logo:focus-visible {
+    outline: 2px solid rgba(168, 85, 247, 0.65);
+    outline-offset: 6px;
+    border-radius: 12px;
+}
+
+.site-logo__mark {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    border-radius: 12px;
+    background:
+        radial-gradient(12px 12px at 30% 30%, rgba(34, 211, 238, 0.45), transparent 60%),
+        radial-gradient(16px 16px at 70% 60%, rgba(168, 85, 247, 0.55), transparent 65%),
+        rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow:
+        0 10px 22px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(168, 85, 247, 0.08) inset;
+}
+
+.site-logo__ring {
+    position: absolute;
+    inset: 8px;
+    border-radius: 999px;
+    border: 2px solid rgba(168, 85, 247, 0.65);
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.25);
+}
+
+.site-logo__spark {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    right: 7px;
+    top: 7px;
+    border-radius: 3px;
+    background: linear-gradient(135deg, rgba(34, 211, 238, 1), rgba(168, 85, 247, 1));
+    transform: rotate(18deg);
+    box-shadow: 0 0 14px rgba(34, 211, 238, 0.35);
+}
+
+.site-logo__type {
+    font-size: 1.5rem; /* ~text-2xl */
+    background: linear-gradient(90deg, rgba(255,255,255,0.95), rgba(168, 85, 247, 0.95));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.site-logo:hover .site-logo__mark {
+    border-color: rgba(168, 85, 247, 0.30);
+    box-shadow:
+        0 14px 28px rgba(0, 0, 0, 0.40),
+        0 0 0 1px rgba(168, 85, 247, 0.16) inset,
+        0 0 18px rgba(168, 85, 247, 0.12);
+}
+
+.site-logo:hover .site-logo__ring {
+    border-color: rgba(34, 211, 238, 0.75);
+}
+
+@media (max-width: 480px) {
+    .site-logo__svg {
+        height: 40px;
+    }
+
+    .site-logo__mark {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+        border-radius: 11px;
+    }
+
+    .site-logo__type {
+        font-size: 1.25rem;
+    }
+}
+
 /* App-header/app-navbar styles removed (using Tailwind navbar now) */
 
 /* Legacy navbar styles retained for compatibility (header now uses .app-header) */
@@ -103,8 +203,40 @@ body {
 #home {
     display: flex;
     align-items: center;
-    height: 80vh;
+    height: auto;
     padding: 70px 9% 0;
+}
+
+/* Fullscreen hero that also contains the AI stats */
+.hero-fullscreen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 96px; /* keep content below fixed navbar */
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 2.25rem;
+}
+
+@media (min-width: 768px) {
+    .hero-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Make stats more compact when living inside the hero */
+.hero-fullscreen .ai-stats__header {
+    margin-bottom: 1.25rem;
+}
+
+.hero-fullscreen .ai-stats {
+    padding: 0;
 }
 
 .home-info h3 span {
@@ -337,9 +469,144 @@ body {
 #progress-experience,
 #progress-project,
 #progress-skill {
-    width: 60px;
-    height: 60px;
+    width: 72px;
+    height: 72px;
   }
+
+/* AI Stats (Progress + Counters) */
+.ai-stats {
+    position: relative;
+}
+
+.ai-stats__header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.ai-stats__kicker {
+    display: inline-block;
+    font-size: 0.9rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(226, 232, 240, 0.7);
+}
+
+.ai-stats__title {
+    margin-top: 0.75rem;
+    font-size: clamp(1.6rem, 2.3vw, 2.2rem);
+    font-weight: 700;
+}
+
+.ai-stats__subtitle {
+    margin-top: 0.5rem;
+    color: rgba(226, 232, 240, 0.75);
+}
+
+.ai-stats__grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .ai-stats__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+}
+
+.ai-stat {
+    position: relative;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    background:
+        linear-gradient(180deg, rgba(17, 24, 39, 0.72), rgba(17, 24, 39, 0.42));
+    border: 1px solid rgba(168, 85, 247, 0.16);
+    box-shadow:
+        0 18px 50px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    overflow: hidden;
+    transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.ai-stat::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: radial-gradient(550px circle at var(--mx, 50%) var(--my, 20%), rgba(168, 85, 247, 0.22), transparent 55%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 200ms ease;
+}
+
+.ai-stat:hover {
+    transform: translateY(-4px);
+    border-color: rgba(168, 85, 247, 0.35);
+    box-shadow:
+        0 22px 70px rgba(0, 0, 0, 0.45),
+        0 0 0 1px rgba(168, 85, 247, 0.08) inset;
+}
+
+.ai-stat:hover::before {
+    opacity: 1;
+}
+
+.ai-stat__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.ai-stat__icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: rgba(168, 85, 247, 0.12);
+    border: 1px solid rgba(168, 85, 247, 0.18);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
+    flex: 0 0 auto;
+}
+
+.ai-stat__icon i {
+    font-size: 1.35rem;
+    color: rgba(224, 190, 250, 0.95);
+}
+
+.ai-stat__ring {
+    position: relative;
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+}
+
+.ai-stat__value {
+    position: absolute;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.ai-stat__meta {
+    margin-top: 1rem;
+}
+
+.ai-stat__label {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.ai-stat__desc {
+    margin-top: 0.25rem;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: rgba(226, 232, 240, 0.72);
+}
 
   
 

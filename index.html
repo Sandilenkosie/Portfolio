@@ -15,7 +15,9 @@
         <!-- Header Section -->
     <nav id="site-nav" class="navbar fixed top-0 left-0 w-full z-50 nav--transparent">
             <div class="container mx-auto flex justify-between items-center p-4">
-                <a href="#home" class="text-2xl font-bold">Sandile Nkosi</a>
+                <a href="#home" class="site-logo" aria-label="Lettie home" title="Lettie">
+                    <img class="site-logo__svg" src="static/img/lettie-logo.svg" alt="Lettie" decoding="async" />
+                </a>
                 <!-- Mobile Hamburger Menu -->
                 <div class="lg:hidden">
                     <button id="mobile-menu-toggle" class="text-2xl focus:outline-none" aria-label="Open menu">
@@ -48,57 +50,89 @@
         <!-- Background: rain animation -->
         <canvas id="rain-canvas" aria-hidden="true"></canvas>
 
-        <!-- Home Section with Image -->
-        <section id="home" class="section-box flex flex-col md:flex-row items-center justify-center gap-10 p-2">
-            <div class="home-img flex flex-col justify-center items-center">
-                <div class="img-box">
-                    <div class="img-item">
-                        <img src="static/img/pexels-mikhail-nilov-6964348.jpg" alt="Your Photo" class="w-full h-auto object-cover rounded-lg shadow-md">
+        <!-- Home / Hero (full screen) + AI Stats in the same section -->
+        <section id="home" class="section-box hero-fullscreen">
+            <div class="hero-grid">
+                <div class="home-img flex flex-col justify-center items-center">
+                    <div class="img-box">
+                        <div class="img-item">
+                            <img src="static/img/pexels-mikhail-nilov-6964348.jpg" alt="Your Photo" class="w-full h-auto object-cover rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home-info">
+                    <h2 class="text-4xl text-white">Hi, I'm <span class="text-purple-600">Sandile Nkosi</span></h2>
+                    <h3 class="text-2xl font-semibold mt-2">AI-focused 
+                        <span style="--i:4;" data-text="AI Automation Engineer">AI Automation Engineer</span>
+                        <span style="--i:3;" data-text="AI Engineer">AI Engineer</span>
+                        <span style="--i:2;" data-text="Software Engineer">Software Engineer</span>
+                        <span style="--i:1;" data-text="Salesforce Developer">Salesforce Developer</span>
+                    </h3>
+                    <p class="mt-4">
+                        I design and deliver reliable automation and AI-enabled solutions—integrating APIs, building intelligent workflows, and shipping scalable applications with a strong focus on security, maintainability, and business impact.
+                    </p>
+                    <div class="btn-sci">
+                    <a href="static/Sandile Nkosi CV.pdf" class="btn flex items-center" download><i class='bx bxs-download text-xl'></i><span>Download CV</span></a>
+                        <div class="sci">
+                            <a href="https://github.com/sandilenkosie"><i class='bx bxl-github'></i></a>
+                            <a href="https://linkedin.com/in/sandilenkosie"><i class='bx bxl-linkedin' ></i></a>
+                            <a href="mailto:sandilenkosie06@gmail.com"><i class='bx bxl-gmail' ></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="home-info">
-                <h2 class="text-4xl text-purple-600">Sandile Nkosi</h2>
-                <h3 class="text-2xl font-semibold mt-2">I am a 
-                    <span style="--i:4;" data-text="AI Automation Engineer">AI Automation Engineer</span>
-                    <span style="--i:3;" data-text="AI Engineer">AI Engineer</span>
-                    <span style="--i:2;" data-text="Software Engineer">Software Engineer</span>
-                    <span style="--i:1;" data-text="Salesforce Developer">Salesforce Developer</span>
-                </h3>
-                <p class="mt-4">AI Automation | API Integrations | Intelligent Workflows | Python | Cloud Platforms | Scalable Application Design</p>
-                <div class="btn-sci">
-                <a href="static/Sandile Nkosi CV.pdf" class="btn flex items-center" download><i class='bx bxs-download text-xl'></i><span>Download CV</span></a>
-                    <div class="sci">
-                        <a href="https://github.com/sandilenkosie"><i class='bx bxl-github'></i></a>
-                        <a href="https://linkedin.com/in/sandilenkosie"><i class='bx bxl-linkedin' ></i></a>
-                        <a href="mailto:sandilenkosie06@gmail.com"><i class='bx bxl-gmail' ></i></a>
+
+            <!-- AI Stats (Progress + Counters) inside Hero -->
+            <div id="progress-section" class="ai-stats">
+                <div class="container mx-auto">
+                    <div class="ai-stats__grid">
+                        <article class="ai-stat" aria-label="Experience">
+                            <div class="ai-stat__top">
+                                <div class="ai-stat__icon" aria-hidden="true">
+                                    <i class='bx bx-timer'></i>
+                                </div>
+                                <div id="progress-experience" class="ai-stat__ring" role="img" aria-label="Experience progress">
+                                    <span id="experience-number" class="ai-stat__value">0</span>
+                                </div>
+                            </div>
+                            <div class="ai-stat__meta">
+                                <h3 class="ai-stat__label">Years Experience</h3>
+                                <p class="ai-stat__desc">Automation, integrations, and shipping production software.</p>
+                            </div>
+                        </article>
+
+                        <article class="ai-stat" aria-label="Projects">
+                            <div class="ai-stat__top">
+                                <div class="ai-stat__icon" aria-hidden="true">
+                                    <i class='bx bx-code-alt'></i>
+                                </div>
+                                <div id="progress-project" class="ai-stat__ring" role="img" aria-label="Projects progress">
+                                    <span id="project-number" class="ai-stat__value">0</span>
+                                </div>
+                            </div>
+                            <div class="ai-stat__meta">
+                                <h3 class="ai-stat__label">Projects Delivered</h3>
+                                <p class="ai-stat__desc">From dashboards and APIs to end-to-end workflow automation.</p>
+                            </div>
+                        </article>
+
+                        <article class="ai-stat" aria-label="Skills">
+                            <div class="ai-stat__top">
+                                <div class="ai-stat__icon" aria-hidden="true">
+                                    <i class='bx bx-brain'></i>
+                                </div>
+                                <div id="progress-skill" class="ai-stat__ring" role="img" aria-label="Skills progress">
+                                    <span id="skill-number" class="ai-stat__value">0</span>
+                                </div>
+                            </div>
+                            <div class="ai-stat__meta">
+                                <h3 class="ai-stat__label">Skills & Tools</h3>
+                                <p class="ai-stat__desc">Python, Salesforce, cloud, prompt engineering, and more.</p>
+                            </div>
+                        </article>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Progress Circles Section -->
-        <section id="progress-section" class="section-box flex flex-col md:flex-row justify-center items-center gap-12 p-6">
-            <div class="text-center">
-                <div id="progress-experience" class="relative flex justify-center items-center">
-                    <span id="experience-number" class="absolute text-sm font-semibold">0</span>
-                </div>
-                <h3 class="text-lg font-semibold mt-4">Experie</h3>
-            </div>
-
-            <div class="text-center">
-                <div id="progress-project" class="relative flex justify-center items-center">
-                    <span id="project-number" class="absolute text-sm font-semibold">0</span>
-                </div>
-                <h3 class="text-lg font-semibold mt-4">Projects</h3>
-            </div>
-
-            <div class="text-center">
-                <div id="progress-skill" class="relative flex justify-center items-center">
-                    <span id="skill-number" class="absolute text-sm font-semibold">0</span>
-                </div>
-                <h3 class="text-lg font-semibold mt-4">Skills</h3>
             </div>
         </section>
         
