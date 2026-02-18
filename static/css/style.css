@@ -2,6 +2,29 @@
     scroll-behavior: smooth;
 }
 
+:root {
+    --app-bg: radial-gradient(1200px 600px at 10% 0%, rgba(168, 85, 247, 0.18), transparent 60%),
+              radial-gradient(900px 500px at 90% 10%, rgba(34, 211, 238, 0.12), transparent 60%),
+              #0b1220;
+    --app-surface: rgba(255, 255, 255, 0.04);
+    --app-border: rgba(255, 255, 255, 0.10);
+    --app-text: rgba(255, 255, 255, 0.92);
+    --app-muted: rgba(255, 255, 255, 0.65);
+    --app-accent: #a855f7;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: var(--app-bg);
+    color: var(--app-text);
+}
+
+/* App-header/app-navbar styles removed (using Tailwind navbar now) */
+
+/* Legacy navbar styles retained for compatibility (header now uses .app-header) */
 .navbar{
     position: fixed;
     left: 0%;
@@ -14,6 +37,25 @@
     opacity: 0;
     animation:  show-content 1.5s linear forwards;
     animation-delay: 1.2s;
+}
+
+/* Navbar scroll behavior: transparent over hero, solid after scroll */
+#site-nav {
+    transition: background-color 220ms ease, backdrop-filter 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.nav--transparent {
+    background-color: rgba(11, 18, 32, 0.0);
+    backdrop-filter: blur(0px);
+    box-shadow: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+}
+
+.nav--scrolled {
+    background-color: rgba(11, 18, 32, 0.82);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Mobile-specific tweaks */
@@ -189,24 +231,15 @@
     }
 }
 
-.bars-animation {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
+/* Rain background canvas */
+#rain-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
-}
-
-.bars-animation .bar {
-    width: 100%;
-    height: 100%;
-    background: #1a202c;
-    animation: show-bars 10s ease infinite;
-    animation-delay: calc(.6s * var(--i));
-}
-
-@keyframes show-bars {
-    100% { transform: translateY(100%); }
+    pointer-events: none;
+    opacity: 0.88;
 }
 
 .home-img .img-box {
