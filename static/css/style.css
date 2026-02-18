@@ -386,6 +386,21 @@ body {
     overflow: hidden;
 }
 
+/* Hero image sizing: make it bigger on small screens */
+@media screen and (max-width: 768px) {
+    .home-img .img-box {
+        width: min(78vw, 360px);
+        height: min(78vw, 360px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-img .img-box {
+        width: min(86vw, 380px);
+        height: min(86vw, 380px);
+    }
+}
+
 .home-img .img-box::before,
 .home-img .img-box::after {
     content: "";
